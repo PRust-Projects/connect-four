@@ -1,0 +1,11 @@
+[package]
+name = "connect-four"
+version = "0.1.0"
+authors = ["Patrick Chan <patrickchan1999@gmail.com>"]
+
+[dependencies]
+clap = "2.31"
+rand = "0.5"
+regex = "0.2"
+termion = "*"
+userio = { path = "userio" }

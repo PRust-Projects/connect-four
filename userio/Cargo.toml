@@ -1,0 +1,8 @@
+[package]
+name = "userio"
+version = "0.1.0"
+authors = ["Patrick Chan <patrickchan1999@gmail.com>"]
+
+[dependencies]
+regex = "1.0.0"
+termion = "*"
