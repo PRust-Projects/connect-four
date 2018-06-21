@@ -162,10 +162,12 @@ impl fmt::Display for Board {
         for row in 0..self.board.len() {
             for col in 0..self.board[0].len() {
                 str_board.push_str(" ");
-                if self.board[row][col] == "X" {
-                    str_board.push_str(&format!("{}{}", termion::color::Fg(termion::color::Blue), "X"));
+                if row == self.last_move[0] as usize && col == self.last_move[1] as usize {
+                    str_board.push_str(&format!("{}{}", termion::color::Fg(termion::color::Green), self.board[row][col]));
+                } else if self.board[row][col] == "X" {
+                    str_board.push_str(&format!("{}{}", termion::color::Fg(termion::color::Blue), self.board[row][col]));
                 } else if self.board[row][col] == "O" {
-                    str_board.push_str(&format!("{}{}", termion::color::Fg(termion::color::Red), "O"));
+                    str_board.push_str(&format!("{}{}", termion::color::Fg(termion::color::Red), self.board[row][col]));
                 } else {
                     str_board.push_str(self.board[row][col]);
                 }
