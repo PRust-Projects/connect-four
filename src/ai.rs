@@ -53,19 +53,7 @@ impl Ai {
             if alpha >= beta {
                 break;
             }
-
-            // if score > alpha_copy && turn == 0 {
-            //     alpha_copy = score;
-            // } else if score < beta_copy && turn == 1 {
-            //     beta_copy = score;
-            // }
-            // scores.push(score);
-            // board.remove(*col);
-            // if alpha_copy >= beta_copy {
-            //     break;
-            // }
         }
-        // let (best_score, index) = self.get_best_move(scores, 0);
         if turn == 0 {
             return (best_move, alpha);
         } else {
