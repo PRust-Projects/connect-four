@@ -85,14 +85,7 @@ impl Board {
     }
 
     pub fn is_filled(&self) -> bool {
-        for row in 0..self.board.len() {
-            for col in 0..self.board[0].len() {
-                if self.board[row][col] == " " {
-                    return false;
-                }
-            }
-        }
-        true
+        self.empty_spots_count == 0
     }
     
     pub fn someone_won(&self) -> bool {
